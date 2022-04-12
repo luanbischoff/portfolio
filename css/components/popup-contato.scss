@@ -1,0 +1,129 @@
+@import '../partials/variables.scss';
+
+.popup-contato-modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, rgba(1, 0, 3, 0.8), rgba(0, 0, 0, 0.95));
+  z-index: 998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all .5s;
+  pointer-events: none;
+}
+.popup-contato-modal.active{
+  opacity: 1;
+  transition: all .5s;
+  pointer-events: all;
+}
+.popup-contato-container {
+  background-color: $popup-background;
+  padding: 32px 64px;
+  border-radius: 8px;
+  box-shadow: 0 0 64px transparentize($primary-color, 0.8), 0 0px 16px rgba(255, 255, 255, 0.025), inset 0 0 16px transparentize($primary-color, 0.9);
+  border: 2px solid transparentize($primary-color, 0.75);
+  position: relative;
+  display: none;
+  opacity: none;
+  z-index: 999;
+}
+.popup-contato-container.active{
+  display: block;
+  opacity: 1;
+  transition: all .5s;
+}
+.popup-contato__headline {
+  color: $primary-text;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 8px;
+}
+.popup-contato__subheadline {
+  color: $secondary-text;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 100%;
+  margin-bottom: 24px;
+}
+.popup-contato__subheadline-span{
+  text-align: center;
+}
+// .popup-contato__form {
+// }
+.popup-contato__form-group {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 16px;
+}
+.popup-contato__form-label {
+  color: $secondary-text;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.popup-contato__form-input {
+  padding: 8px 16px;
+  background: #121212;
+  border: 1px solid #121212;
+  color: #ffffff;;
+  font-weight: 300;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.25s;
+
+  &:focus {
+    border: 1px dashed transparentize($primary-color, 0.7);
+    box-shadow: 0 0 16px transparentize($primary-color, 0.85);
+  }
+}
+.popup-contato__form-button {
+  background: $primary-color;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.25s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 16px transparentize($primary-color, 0.75);
+    transform: scale(1.01);
+  }
+
+  &:disabled {
+    background: transparentize($primary-color, 0.8);
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+    cursor: not-allowed;
+
+    &:hover {
+      box-shadow: none;
+      transform: none;
+      animation: btnShake 0.15s ease-in-out;
+    }
+  }
+}
+.popup-contato-close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background:none;
+  color: #bababa;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  line-height: 100%;
+}

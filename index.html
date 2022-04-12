@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Lorem Ipsum - Dolor sit amet!</title>
+  </head>
+  <body>
+    <section class="popup-contato-modal">
+      <div class="popup-contato-container">
+        <h2 class="popup-contato__headline">Quase lá...</h2>
+        <h3 class="popup-contato__subheadline">
+          <span class="break popup-contato__subheadline-span">Preencha os campos abaixo, eu entrarei</span>
+          <span class="break popup-contato__subheadline-span">em contato o mais rápido possível!</span>
+        </h3>
+        <form class="popup-contato__form" autocomplete="off" id="contato-form">
+          <div class="popup-contato__form-group">
+            <label for="nome" class="popup-contato__form-label">Nome</label>
+            <input type="text" id="nome" class="popup-contato__form-input" placeholder="Digite seu nome..." />
+          </div>
+          <div class="popup-contato__form-group">
+            <label for="whatsapp" class="popup-contato__form-label">WhatsApp</label>
+            <input type="text" id="whatsapp" class="popup-contato__form-input" placeholder="Digite seu número de WhatsApp..." />
+          </div>
+          <div class="popup-contato__form-group">
+            <button type="submit" id="contato-form-submit" class="popup-contato__form-button" disabled>Entrar em contato</button>
+          </div>
+        </form>
+        <button class="popup-contato-close">x</button>
+      </div>
+    </section>
+    <section class="hero">
+      <nav class="navbar">
+        <div class="container navbar-wrapper">
+          <div class="navbar-wrapper__left">
+            <ul class="navbar-links">
+              <li class="navbar-links__li">
+                <a href="#inicio" class="navbar-links__link">Início</a>
+                <a href="#portfolio" class="navbar-links__link">Portfolio</a>
+                <a href="#contato" class="navbar-links__link">Entrar em contato</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-wrapper__center">
+            <a href="index.html" class="navbar-logo">
+              <img src="img/logo.png" alt="Logo" class="navbar-logo__img" />
+            </a>
+          </div>
+          <div class="navbar-wrapper__right">
+            <button class="cta btn-contato"><a class="cta__link">Entrar em contato</a></button>
+          </div>
+        </div>
+      </nav>
+      <section class="hero-section">
+        <div class="container hero-section__container">
+          <div class="hero-text-container">
+            <div class="hero-text__caption-container">
+              <h3 class="hero-text__caption">
+                Lorem ipsum <span class="hero-text__caption-emoji">👋</span>, dolor!
+              </h3>
+            </div>
+            <div class="hero-text__headline-container">
+              <h2 class="hero-text__headline">
+                Lorem Ipsum
+              </h2>
+            </div>
+            <div class="hero-text__subheadline-container">
+              <h3 class="hero-text__subheadline">
+                <span class="break">Lorem ipsum dolor sit amet lipsum eit ot</span>
+                <span class="break">dolor sit amet lorem ot amet ipsum dolor.</span>
+              </h3>
+            </div>
+            <button class="cta cta--hero btn-contato">
+              <a class="cta__link cta__link--hero">Entrar em contato</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="js/script.js"></script>
+  </html>
+  
