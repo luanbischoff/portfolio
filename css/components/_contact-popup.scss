@@ -26,10 +26,13 @@
   border-radius: 8px;
   box-shadow: 0 0 64px transparentize($primary-color, 0.8), 0 0px 16px rgba(255, 255, 255, 0.025), inset 0 0 16px transparentize($primary-color, 0.9);
   border: 2px solid transparentize($primary-color, 0.75);
-  position: relative;
   display: none;
   opacity: none;
   z-index: 999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 .popup-contato-container.active{
   display: block;
@@ -40,7 +43,7 @@
   color: $primary-text;
   text-align: center;
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 100%;
   margin-bottom: 8px;
 }
@@ -89,7 +92,7 @@
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 700;
+  font-weight: 500;
   padding: 8px;
   border-radius: 4px;
   transition: all 0.25s;

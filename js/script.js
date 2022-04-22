@@ -10,21 +10,29 @@ const formNameInput = document.querySelector('#nome');
 const formWhatsAppInput = document.querySelector('#whatsapp');
 const contactFormSubmit = document.querySelector('#contato-form-submit');
 
-for (let i = 0; i < contactButtons.length; i++) {
-  contactButtons[i].addEventListener('click', function () {
-    contactModal.classList.add('active');
-    contactModalContainer.classList.add('active');
-  });
-}
-
-contactModalClose.addEventListener('click', function () {
+function closeContactModal() {
   contactModal.classList.remove('active');
   contactModalContainer.classList.remove('active');
   formNameInput.value = '';
   formWhatsAppInput.value = '';
   contactFormSubmit.disabled = true;
-});
+}
+function openContactModal() {
+  contactModal.classList.add('active');
+  contactModalContainer.classList.add('active');
+}
 
+for (let i = 0; i < contactButtons.length; i++) {
+  contactButtons[i].addEventListener('click', function () {
+    openContactModal();
+  });
+}
+contactModal.addEventListener('click', function () {
+  closeContactModal();
+});
+contactModalClose.addEventListener('click', function () {
+  closeContactModal();
+});
 formNameInput.addEventListener('input', function () {
   if (formNameInput.value !== '' && formWhatsAppInput.value !== '') {
     contactFormSubmit.disabled = false;
@@ -48,5 +56,11 @@ formWhatsAppInput.addEventListener('input', function () {
     formWhatsAppInput.style.borderStyle = 'solid';
   } else {
     formWhatsAppInput.style.borderStyle = 'dashed';
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && contactModal.classList.contains('active')) {
+    closeContactModal();
   }
 });

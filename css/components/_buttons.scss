@@ -1,0 +1,43 @@
+@import '../partials/variables.scss';
+
+.cta {
+  border: none;
+  background: #3a45ac;
+  border-radius: 4px;
+  transition: all 0.25s;
+  cursor: pointer;
+
+  &__link {
+    padding: 6px 16px;
+    display: block;
+    text-decoration: none;
+    color: $secondary-text;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 16px rgba(58, 69, 172, 0.5);
+  }
+  &:focus{
+    outline: none;
+  }
+}
+.cta--hero {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  border-radius: 6px;
+  border: 1px dashed #000000;
+  transition: all 1s;
+  animation: hero-cta-background 3s infinite linear;
+  
+  &:hover {
+    border: 1px solid $primary-color;
+    background: #000000;
+    transition: all 1s;
+  }
+}
+.cta__link--hero {
+  padding: 12px 24px;
+}
